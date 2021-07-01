@@ -1,3 +1,15 @@
+const express = require('express')
+const app = express()
+ 
+app.get('/', function (req, res) {
+  res.send('Hello World')
+})
+ let port = process.env.PORT || 3000;
+app.listen(port)
+ 
+require('dotenv').config()
+///////////////////////TuBot///////////////////////
+
 const mineflayer = require('mineflayer')
 const fs = require('fs');
 let rawdata = fs.readFileSync('config.json');
